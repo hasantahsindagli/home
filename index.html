@@ -32,7 +32,7 @@ var alarmAktif = false;
 function submitForm() {
   var form = document.getElementById('myForm');
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', 'http://192.168.2.130/set', true);
+  xhr.open('POST', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/set', true);
   xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
   xhr.onload = function () {
     if (xhr.status === 200) {
@@ -54,7 +54,7 @@ function submitForm() {
   xhr.send(new URLSearchParams(new FormData(form)));
   var xhr2 = new XMLHttpRequest();
   var checked = document.getElementById('checkboxtt').checked ? 1 : 0;
-  xhr2.open('GET', 'http://192.168.2.130/updatett?state=' + checked, true);
+  xhr2.open('GET', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/updatett?state=' + checked, true);
         var time = document.getElementById('timeBox').value;
         xhr.open('GET', 'settime?time=' + time);
         xhr.send();
@@ -126,14 +126,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (checkbox.checked) {
                 image1.style.display = 'block';
                 image2.style.display = 'none';
-                xhr.open('POST', 'http://192.168.2.130/LAMBA1on', true);
+                xhr.open('POST', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/LAMBA1on', true);
         } else {
-                xhr.open('POST', 'http://192.168.2.130/LAMBA1off', true);
+                xhr.open('POST', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/LAMBA1off', true);
                 image1.style.display = 'none';
                 image2.style.display = 'block';
         }
   var checked = document.getElementById('checkbox1').checked ? 1 : 0;
-  xhr.open('GET', 'http://192.168.2.130/update1?state=' + checked, true);
+  xhr.open('GET', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/update1?state=' + checked, true);
   xhr.send();
     }
     function toggleImage2() {
@@ -144,14 +144,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (checkbox.checked) {
                 image1.style.display = 'block';
                 image2.style.display = 'none';
-                xhr.open('POST', 'http://192.168.2.130/LAMBA2on', true);
+                xhr.open('POST', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/LAMBA2on', true);
         } else {
-                xhr.open('POST', 'http://192.168.2.130/LAMBA2off', true);
+                xhr.open('POST', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/LAMBA2off', true);
                 image1.style.display = 'none';
                 image2.style.display = 'block';
         }
   var checked = document.getElementById('checkbox2').checked ? 1 : 0;
-  xhr.open('GET', 'http://192.168.2.130/update2?state=' + checked, true);
+  xhr.open('GET', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/update2?state=' + checked, true);
   xhr.send();
     }
     function toggleImage0() {
@@ -162,14 +162,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (checkbox.checked) {
                 image1.style.display = 'block';
                 image2.style.display = 'none';
-                xhr.open('POST', 'http://192.168.2.130/LAMBAon', true);
+                xhr.open('POST', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/LAMBAon', true);
         } else {
-                xhr.open('POST', 'http://192.168.2.130/LAMBAoff', true);
+                xhr.open('POST', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/LAMBAoff', true);
                 image1.style.display = 'none';
                 image2.style.display = 'block';
         }
   var checked = document.getElementById('checkbox0').checked ? 1 : 0;
-  xhr.open('GET', 'http://192.168.2.130/update0?state=' + checked, true);
+  xhr.open('GET', 'http://admin:05055261517@hasantahsindagli.keenetic.pro/update0?state=' + checked, true);
   xhr.send();
     }
 function internettenSaatAl(callback) {
@@ -244,19 +244,6 @@ function geriSayimBaslat(alarmSaat, alarmDakika) {
         alarmAktif = false;
     }, alarmSuresi * 60000);
 }
-
-const express = require('express'); 
-  
-// Create the Express App 
-const app = express(); 
-  
-// Import CORS 
-const cors = require('cors'); 
-  
-// Set the access-control-allow-origin header 
-// for all the responses sent from this URL 
-// Using the origin keyword 
-app.use(cors({ origin: 'http://192.168.2.130' }));
 </script>
 
 </body></html>
