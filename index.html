@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+  <script src = "script.js"></script>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bunu Yazan Tosun da olabilirdi...</title>
+</head>
+<body oncontextmenu="return false;">
+<link rel="icon" type="image/x-icon" href="images/devil.png">
+
+  <input type="time" id="saat" step="1" style="font-size:34px;width:178px;height:40px;color:#4800FF;text-align:center;margin: 0 auto;" disabled="disabled" value="">
+  <input type="time" id="timeBox" name="start_time" onchange="alarmZamaniAyarla(this.value)" style="font-size:34px;width:168px;height:40px;font-weight:bold;color:#0094FF;text-align:center;margin: 0 auto;" >
+  <br><br>
+
+
+<img src="images/devil.png" id="imgkur2"><div class="slider-container2">
+<input type="checkbox" id="checkboxtt" class="checkbox1" onchange="toggleTT();" name="action" value="1" unchecked="">
+<label class="slider" for="checkboxtt"></label></div>
+<img src="images/sleep.png" id="imgkur">
+<br>
+<div class="images2">
+  <img src="images/1.png" width="90" height="90" left="200">
+</div>
+<div class="slider-container1">  
+      <input type="checkbox" id="checkbox1" class="checkbox2" onchange="toggleImage1()">  
+      <label class="slider" for="checkbox1"></label></div> <div class="images1">  
+        <img src="images/on.png" id="image11" width="80" height="80" left="200" style="display: none;">  
+        <img src="images/off.png" id="image12" width="80" height="80" left="200" style="display: block;">
+        </div>
+  <div class="images2">  <img src="images/2.png" width="90" height="90" left="200">
+        </div>
+  <div class="slider-container1">  <input type="checkbox" id="checkbox2" class="checkbox2" onchange="toggleImage2()" unchecked="">  
+        <label class="slider" for="checkbox2"></label></div><div class="images1">  
+          <img src="images/on.png" id="image21" width="80" height="80" left="200" style="display: none;">  
+          <img src="images/off.png" id="image22" width="80" height="80" left="200" style="display: block;"></div><div class="images2">        
+            <img src="images/0.png" width="90" height="90" left="200"></div><div class="slider-container1">  
+              <input type="checkbox" id="checkbox0" class="checkbox2" onchange="toggleImage0()" unchecked="">  <label class="slider" for="checkbox0"></label></div>
+              <div class="images1">  <img src="images/on.png" id="image01" width="80" height="80" left="200" style="display: none;">  
+              <img src="images/off.png" id="image02" width="80" height="80" left="200" style="display: block;"></div>
+			  
+
+<style>
+  body { background-image: url('././images/back3.png');background-repeat: no-repeat;background-size: 388px 451px;background-attachment: fixed;overflow: hidden;}
+  .content {max-width: 430px;align-items: center;margin-left: 2px;margin-top: 20px;overflow: auto;}
+  .content2 {max-width: 430px;align-items: center;margin-left: 94px;margin-top: -10px;overflow: auto;}
+  .checkbox1 {display: none;}.checkbox2 {display: none;}
+  .slider-container1 {    display: inline-block;    position: relative;    width: 120px;    height: 54px;    left: 115px;    top: -72px;        }
+  .slider-container2 {    display: inline-block;    position: relative;    width: 120px;    height: 54px;    left: 15px;    top: -10px;        }
+  .slider {    position: absolute;    cursor: pointer;    top: 0;    left: 0;    right: 0;    bottom: 0;    background-color: #7F0000; /* Gray slider color */    -webkit-transition: .4s;    transition: .4s;    border-radius: 54px;}
+  .slider:before {    position: absolute;    content: '';    height: 46px;    width: 46px;    left: 4px;    bottom: 4px;    background-color: #ffffff; /* White button color */    -webkit-transition: .4s;    transition: .4s;    border-radius: 50%;}
+  .checkbox1:checked + .slider:before {    -webkit-transform: translateX(66px);    -ms-transform: translateX(66px);    transform: translateX(66px);}
+  .checkbox1:checked + .slider {    background-color: #4800FF; /* Green slider color */}.checkbox2:checked + .slider:before {    -webkit-transform: translateX(66px);    -ms-transform: translateX(66px);    transform: translateX(66px);}
+  .checkbox2:checked + .slider {    background-color: #00FF21; /* Green slider color */}
+  .images1 {            display: flex;            justify-content: flex-start;            margin-top: -142px;            margin-left: 274px;        }
+  .images2 {            display: flex;            justify-content: flex-start;            margin-top: 6px;        }
+  .images1 img {            display: none;        }        .checkbox2:checked ~ .images1 #image1,        .checkbox2:not(:checked) ~ .images1 #image2 {            display: block;        }
+  #imgkur {  margin-left: 40px;  margin-top: -40px;}
+  #imgkur2 {  width: 100px;  height: 100px;  margin-left: 0px;  margin-top: -8px;}#saat {    margin-left: 0px;    font-size: 34px;    font-weight: bold;}
+  #saat::-webkit-calendar-picker-indicator {    display: none;}
+  #saat::-webkit-inner-spin-button,#saat::-webkit-clear-button {    display: none;}
+  </style>
+</div></div></div></body>
+
+</html>
